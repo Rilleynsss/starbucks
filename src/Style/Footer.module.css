@@ -1,0 +1,167 @@
+.Footer {
+    width: 100%;
+    background-color: #0B0C0D;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Container {
+    width: 1255px;
+    position: relative;
+    z-index: 0;
+}
+
+.Menu {
+    display: flex;
+    padding-top: 38px;
+    width: 1255px;
+    position: relative;
+    z-index: 0;
+}
+
+.Menu ul {
+    margin-right: 62px;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Menu h2 {
+    margin-right: 108px;
+    margin-bottom: 176px;
+}
+
+.Menu ul li:first-child {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 24px;
+    color: #BBB3B3;
+    margin-bottom: 10px;
+}
+
+.Menu ul li:not(:first-child) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #BBB3B36E;
+    margin: 4px 0;
+}
+
+.Contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 36px;
+    width: 1255px;
+    position: relative;
+    z-index: 1;
+}
+
+.Contacts p {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    color: transparent;
+    background: linear-gradient(90deg, #35C66B 0 40%, #237249 60% 100%);
+    background-clip: text;
+}
+
+.Decor {
+    z-index: 0;
+    opacity: .7;
+}
+
+.shadowLogo {
+    r: 150px;
+    cx: 8%;
+    cy: 20%;
+}
+
+.shadowIcon {
+    r: 150px;
+    cx: 97%;
+    cy: 80%;
+}
+
+@media (min-width:768px) and (max-width:1366px) {
+
+    .Container {
+        width: 753px;
+    }
+
+    .Menu {
+        width: 703px;
+        margin-left: 50px;
+        flex-direction: column;
+    }
+    .Contacts{
+        width: 653px;
+        margin:0 50px;
+        margin-top: 30px;
+    }
+    .Contacts p{
+        font-size: 22px;
+    }
+    .Contacts img{
+        width: 50px;
+    }
+
+    .Menu h2 {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .Menu ul li:first-child {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+
+    .Menu ul li:not(:first-child) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width:767px){
+    .Container{
+        width: 365px;
+    }
+    .Contacts{
+        width: 365px;
+    }
+    .Menu h2{
+        margin-bottom: 30px;
+    }
+    .Menu{
+        width: 365px;
+        flex-direction: column;
+    }
+    .Navbar{
+        flex-wrap: wrap;
+    }
+    .Menu ul{
+        margin-right: 50px;
+    }
+    .Menu ul li:first-child {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+
+    .Menu ul li:not(:first-child) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+           .Contacts p {
+               font-size: 20px;
+           }
+           .Contacts img{
+            width: 40px;
+           }
+}

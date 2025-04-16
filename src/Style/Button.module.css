@@ -1,0 +1,77 @@
+.Button{
+    font-weight: 400;
+    line-height: 35px;
+    font-size: 24px;
+    padding: 20px 54px;
+    border-radius: 45px;
+    position: relative;
+    border:none;
+    cursor:pointer;
+}
+.Green{
+    background: linear-gradient(90deg,#35C66B 0 40%,#237249 65% 100%);
+    color:#fff;
+    font-weight: 600;
+}
+.Black {
+    background:#121517;
+    color: #fff;
+}
+.Black:hover::before{
+    opacity: 1;
+    /* transition: all .3s ease; */
+}
+.Black::after{
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 45px;
+    background: linear-gradient(175deg,#DADADA,#dadada00);
+}
+.Black::before {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 45px;
+    background: linear-gradient(175deg,  #237249 0 40%,  #35C66B 60% 100%);
+    transition: all .3s ease;
+    box-shadow: 0 0 500px 1px #35C66B;
+}
+.Green::before {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;  
+    right: -2px;
+    border-radius: 45px;
+    background: linear-gradient(175deg, #16492f 0 40%, #227c43 60% 100%);
+    transition: all .3s ease;
+    box-shadow: 0 0 500px  1px #35C66B;
+}
+.Green:hover::before{
+    opacity: 1;
+}
+@media (min-width:768px) and (max-width:1366px){
+    .Button{
+        font-size: 15px;
+        padding: 10px 35px;
+    }
+}
+@media (min-width:365px) and (max-width:767px) {
+    .Button {
+        font-size: 20px;
+        padding: 10px 35px;
+    }
+}

@@ -1,0 +1,238 @@
+.Events {
+    margin-top: 125px;
+    width: 1255px;
+    position: relative;
+}
+
+.Header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 54px;
+}
+
+.Header h2 {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 87px;
+    margin-left: 72px;
+    color: #fff;
+}
+
+.Header span {
+    color: transparent;
+    background: linear-gradient(90deg, #35C66B 0 40%, #237249 60% 100%);
+    background-clip: text;
+}
+
+.Header p {
+    width: 465px;
+    color: #D9D9D9;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.Wrapper {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Content {
+    opacity: 0;
+    transition: .3s all ease-in-out;
+    z-index: 2;
+    position: relative;
+}
+
+.Card:hover .Content {
+    opacity: 1;
+}
+
+.Card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 260px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    transition: .3s all ease;
+}
+
+.Card:after {
+    content: '';
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.37);
+    position: absolute;
+    opacity: 0;
+    transition: .3s all ease;
+}
+
+.Card:hover::after {
+    opacity: 1;
+}
+
+.Small {
+    width: 400px;
+}
+
+.Large {
+    width: 615px;
+}
+
+.Card h3 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 34px;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+}
+
+.Card button {
+    font-weight: 600;
+    font-size: 24px;
+    padding: 20px 52px;
+}
+
+.Decor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.Line {
+    position: absolute;
+    top: -25px;
+    left: -150px;
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-repeat: no-repeat;
+    z-index: -1;
+}
+
+.shadowTop {
+    r: 350px;
+    cx: 55%;
+    cy: 30%;
+}
+
+.shadowRight {
+    r: 350px;
+    cx: 95%;
+    cy: 60%;
+}
+
+.shadowBottom {
+    r: 250px;
+    cx: 40%;
+    cy: 90%;
+}
+
+.shadowLeft {
+    r: 350px;
+    cx: 10%;
+    cy: 50%;
+}
+
+@media (min-width:768px) and (max-width:1366px) {
+    .Events {
+        width: 768px;
+    }
+    .Header{
+        justify-content: flex-start;
+        margin-left: 50px;
+    }
+
+    .Header h2 {
+        font-size: 50px;
+        line-height: 60px;
+        margin-left: 50px;
+    }
+
+    .Header p {
+        width: 410px;
+        font-size: 14px;
+        line-height: 27px;
+    }
+
+    .Content {
+        opacity: 1;
+    }
+
+    .Small {
+        width: 345px;
+    }
+
+    .Large {
+        width: 95%;
+    }
+
+    .Wrapper {
+        justify-content: space-around;
+    }
+
+    .Card h3 {
+        font-size: 25px;
+    }
+
+    .Card button {
+        padding: 14px 45px;
+    }
+}
+
+@media (min-width:375px) and (max-width:767px) {
+    .Events {
+        width: 375px;
+    }
+
+    .Header {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+
+    .Header h2 {
+        font-size: 50px;
+        line-height: 60px;
+        margin-left: 0;
+    }
+
+    .Header p {
+        font-size: 14px;
+        line-height: 27px;
+        margin-top: 10px;
+    }
+
+    .Content {
+        opacity: 1;
+    }
+
+    .Card button {
+        padding: 14px 45px;
+    }
+
+    .Small {
+        width: 100%;
+    }
+
+    .Large {
+        width: 100%;
+    }
+
+    .Line {
+        top: 5px;
+    }
+}

@@ -1,0 +1,157 @@
+.Card {
+
+    width: 277px;
+    height: 554px;
+    position: relative;
+    background-color: #121517;
+    border-radius: 35px;
+    transition: all .3s ease;
+    margin: 20px 0;
+}
+.Card img{ 
+    width: 210px;
+    height: 270px;
+    position: relative;
+    z-index: 2;
+}
+.Card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 5px);
+    z-index: -2;
+    background: linear-gradient(290deg, #DADADA, #DADADA12,
+            #DADADA);
+    border-radius: 35px;
+    transition: all .3s ease;
+}
+
+.Card::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 5px);
+    z-index: -2;
+    background: linear-gradient(-160deg, #35C66B 0 40%, #237249 60% 100%);
+    opacity: 0;
+    border-radius: 35px;
+    transition: all .3s ease;
+}
+
+.Card:hover::after {
+    opacity: 1;
+}
+.Card:hover::before {
+    opacity: 0;
+}
+
+.Card h3{
+    position: relative;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 52px;
+    color:#fff;
+    margin-bottom: 4px;
+    text-align: center;
+}
+.Card h4{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    color:#D9D9D9;
+    margin-bottom: 7px;
+    text-align: center;
+}
+.Card p{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 52px;
+    color:#fff;
+    margin-bottom: 30px;
+}
+.Card span{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+}
+.Card button {
+    font-size: 17px;
+    line-height: 25px;
+    padding: 14px 38px;
+}
+.Content{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Decor{
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+.shadowWhite{
+    opacity: .4;
+    transition: .3s all;
+    r:250px;
+    cx: 50%;
+}
+.shadowHover{
+    opacity: 0;
+    transition: .3s all;
+    r: 250px;
+    cx: 50%;
+}
+.Card:hover .shadowWhite{
+    opacity: 0;
+}
+.Card:hover .shadowHover {
+    opacity: 1;
+}
+
+@media (min-width:768px) and (max-width:1366px){
+    .Card{
+        width: 170px;
+        height: 366px;
+    }
+    .Card img{
+        width: 122px;
+        height: 160px;
+    }
+    .greenCircle{
+        r:55px;
+        cy:22%;
+        cx:52%
+    }
+    .Card h3{
+        font-size: 24px;
+        line-height: 38px;
+    }
+    .Card h4{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .Card p{
+        font-size: 25px;
+        line-height: 38px;
+    }
+    .Card button{
+        font-size: 15px;
+        padding: 10px 35px;
+    }
+}
+@media (max-width:767px){
+
+    .Card{
+
+        margin: 10px 20px;
+        padding: 0 25px;
+    }
+}

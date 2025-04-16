@@ -1,0 +1,188 @@
+.Contacts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 107px;
+    width: 1255px;
+    position: relative;
+}
+.Content h2{
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 87px;
+    color: #fff;
+    margin-top: 69px;
+}
+.Content span{
+    color:transparent;
+    background: linear-gradient(90deg, #35C66B 0 40%,#237249 60% 100%);
+    background-clip: text;
+}
+.Subheader{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color:#D9D9D9;
+    max-width: 395px;
+    margin-top: 52px;
+}
+.Content ul{
+    margin-top: 60px;
+}
+.Content li:first-child{
+    margin-bottom: 28px;
+}
+.Social{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color:#fff;
+    margin-left: 24px;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+}
+
+.SocialImg:last-child{
+    width: 44px;
+    height: 44px;
+}
+.Content li{
+    display: flex;
+    align-items: center;
+    
+}
+.Content li:hover .Social{
+    color:#35C66B;
+}
+.imgAnimate {
+    transition: all .2s;
+    width: 354px;
+    position: absolute;
+}
+.Star{
+    position: absolute;
+    transition: .2s all;
+    top:-90px;
+    left:-100px;
+    width: 185px;
+    height: 185px;
+}
+.ImgBg {
+    background: linear-gradient(200deg, #237249 0 45%, #35C66B 60% 100%);
+    width: 354px;
+        height: 530px;
+    transition: all .2s;
+    position: relative;
+}
+.Lines{
+    position: absolute;
+    right: 100px;
+    width: 800px;
+    z-index: -1;
+    mask-image: linear-gradient(to right,rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 90%;
+    mask-repeat: no-repeat;
+}
+.shadowText{
+    r: 350px;
+    cx: 10%;
+    cy:50%
+}
+.shadowImage{
+    r: 250px;
+    cx: 75%;
+    cy:15%;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    50% {
+        transform: translateX(10px) translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-20px) translateY(20px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@media (min-width:768px) and (max-width:1366px){
+    .Contacts{
+        width: 768px;
+        justify-content: flex-start;
+    }
+    .ImgBg{
+        width: 320px;
+        height: 480px;
+        animation: anim 5s ease infinite;
+    }
+    .imgAnimate{
+        width: 320px;
+        animation: anim2 5s ease infinite;
+    }
+    .Star{
+        animation: anim2 5s ease infinite;
+    }
+    .Content{margin-left: 50px;}
+    .Content h2{
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .Subheader{
+        font-size: 14px;
+        line-height: 27px;
+        margin-top: 20px;
+        max-width: 360px;
+    }
+    .Social{
+        font-size: 27px;
+    }
+}
+
+@media (max-width:767px){
+    .Contacts{
+        width: 365px;
+        flex-direction: column-reverse;
+    }
+    .ImgBg {
+        animation: anim 5s ease infinite;
+        width: 250px;
+        height: 375px;
+    }
+
+    .imgAnimate {
+        animation: anim2 5s ease infinite;
+        width: 250px;
+    }
+
+    .Star {
+        animation: anim2 5s ease infinite;
+    }
+    .Lines{
+        top: -130px;
+    }
+    .Content h2{
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .Subheader{
+        font-size: 14px;
+        line-height: 27px;
+    }
+}

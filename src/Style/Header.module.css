@@ -1,0 +1,220 @@
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 48px;
+    position: relative;
+    right: 220px;
+    z-index: 1;
+}
+
+.Navbar {
+    display: flex;
+    margin-left: 95px;
+    position: relative;
+}
+.ModalMenu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: none;
+}
+.Header a {
+    padding: 0 46px;
+    cursor: pointer;
+    color: #D9D9D9;
+    transition: all .3s ease;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.Header a:hover {
+    font-size: 22px;
+    color: #237249
+}
+
+.Burger {
+    display: none;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    width: 40px;
+    padding: 15px 0;
+    right: 0;
+}
+
+.Burger.Open{
+    position: fixed;
+    margin-right: 7%;
+}
+.BurgerLine {
+    display: block;
+    height: 4px;
+    width: 40px;
+    background: linear-gradient(to right, #35C66B, #237249);
+    border-radius: 5px;
+    
+}
+.BurgerLine.Close{
+    height: 4px;
+    transition: all .3s linear .1s;
+}
+.BurgerLine.Open {
+    /* position: fixed; */
+    height: 0px;
+    transition: all .3s linear 0s;
+}
+
+.BurgerLine::before{
+    content: '';
+    left: 0;
+    top:0;
+    height: 4px;
+    width: 40px;
+    background: linear-gradient(to right, #35C66B, #237249);
+    border-radius: 5px;
+    position: absolute;
+}
+
+
+.BurgerLine::after {
+    content: '';
+    top:0;
+    left: 0;
+    height: 4px;
+    width: 40px;
+    background: linear-gradient(to right, #35C66B, #237249);
+    border-radius: 5px;
+    position: absolute;
+}
+
+
+.BurgerLine.Close::before {
+    transition: top .3s linear .3s, transform .2s linear 0s;
+    top: 0%;
+}
+
+.BurgerLine.Open::before {
+    transition: top .3s linear 0s, transform .2s linear .3s;
+    transform: rotate(45deg);
+    top: 45%;
+}
+.BurgerLine.Close::after{
+    transition: top .3s linear .3s, transform .2s linear 0s;
+    top: calc(100% - 4px);
+}
+.BurgerLine.Open::after {
+    transition: top .3s linear 0s, transform .2s linear .3s;
+    transform: rotate(-45deg);
+    top: 45%;
+}
+
+
+
+
+.Modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.459);
+    position: fixed;
+    left: 0;
+    top: 0px;
+    display: none;
+}
+.Modal.Close{
+    transition:opacity .3s linear .3s,z-index 0s linear .3s,height 0s linear .6s;
+    height: 0;
+    opacity: 0;
+    z-index: -5;
+    position: fixed;
+
+}
+.Modal.Open{
+
+    opacity: 1;
+    transition: opacity .3s linear 0s;
+    z-index: 0;
+    overflow: hidden;
+    position: fixed; 
+    top:0;
+}
+
+
+
+
+.ModalContent{
+    position: relative;
+    top: 0;
+    height: 60vh;
+    background-color: rgb(46, 46, 46);
+    transition: .5s all;
+    border-radius: 0 0 20px 20px;
+    z-index: 5;
+}
+.Modal.Close .ModalContent{
+    top:calc(-60vh - 48px)
+}
+.ModalContent.Open{
+    top: -48px;
+} 
+
+
+
+
+@media (min-width:768px) and (max-width:1366px) {
+    .Header {
+        right: 0px;
+        left: 20px;
+    }
+    .Navbar{
+        margin-left: 20px;
+    }
+        .Header a:hover{
+    font-size: 20px;
+        }
+
+}
+
+@media (min-width:375px) and (max-width:767px) {
+    .Header{
+        right: 0;
+        justify-content: space-between;
+        margin: 0;
+        padding: 45px 30px 0;
+        width: 100vw;
+    }
+
+    .Burger {
+        display: block;
+    }
+    .Modal{
+        display: block;
+        position: absolute;
+        height: 100vh;
+        z-index: 10;
+    }
+    .ModalMenu{
+        display: flex;
+            flex-direction: column;
+        justify-content: space-around;
+        height: 70%;
+        margin-left: 10px;
+        padding-top: 10px;
+    }
+    .Navbar{
+        display: none;
+    }
+    .Header a{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .Header a:hover{
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+}
